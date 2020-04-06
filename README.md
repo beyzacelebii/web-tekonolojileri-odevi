@@ -1,6 +1,6 @@
 # web-tekonolojileri-odevi
 
-Merhaba ben Beyza. Web teknolojileri ödevi amcıyla ilk projemi gerçekleştireceğim.
+Merhaba ben Beyza. Web teknolojileri ödevi amacıyla ilk projemi gerçekleştireceğim.
 Bu web sayfası 6 tane sayfadan oluşup bunlar; hakkımda sayfası , özgeçmiş sayfası , şehrim sayfası, mirasımız sayfası ,login sayfası ve iletişim sayfası olacaktır.
 
 Hakkımda sayfası kendimi tanıtan bilgileri içericek ve giriş sayfası olacaktır.
