@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="stil.css">
+    <title>Document</title>
+<script type="text/javascript">
+function kontrol()
+{ 
+
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var mail = document.getElementById("mail").value;
+
+    Form =document.forms['iletişim'];
+    Radyoseçim=0;
+    for(i=0; i<Form.elements['cinsiyet'].length; i++)
+    {
+        if(Form.elements['cinsiyet'][i].checked==1)
+        {
+            Radyoseçim=1;
+            break;
+        }
+    }
+    CheckSecim=0;
+    for(i=0; i<Form.elements['spor'].length; i++)
+    {
+        if(Form.elements['spor'].checked==1)
+        {
+            CheckSecim=1;
+            break;
+        }
+    }
+  
+
+
+if(Form.elements['isim'].value.length==0)
+{
+    alert("lütfen isminizi giriniz");
+}
+ else if(Form.elements['soyisim'].value.length==0)
+{
+    alert("lütfen soyisminizi giriniz");
+}
+else if(Radyoseçim==0)
+{
+    alert("lütfen cinsiyetinizi seçiniz");
+}
+else if (reg.test(mail) == false) 
+    {
+      alert('lütfen E-mail giriniz(hatalı) ');
+      return false;
+    }
+    
+else if(Form.elements['şifre'].value.length==0)
+{
+    alert("lütfen şifrenizi giriniz");
+}
+else if(Form.elements['dgünü'].value.length==0)
+{
+    alert("lütfen doğum yılınızı  giriniz");
+}
+else if(Form.elements['şehir'].value.length<1)
+{
+    alert("Lütfen memleket seçiniz"); 
+}
+
+
+
+else Form.submit();
+
+}
+
+
+</script>
+</head>
+<body>
+<div class="menu">
+    <nav class="nav justify-content-center" >
+        <a href="hakkımda.html" class="nav-link">HAKKIMDA </a>
+        <a href="özgeçmiş.html" class="nav-link">ÖZGEÇMİŞ </a>
+        <a href="şehrim.html" class="nav-link">ŞEHRİM </a>
+        <a href="mirasım.html" class="nav-link">MİRASIM</a>
+        <a href="iletişim.html" class="nav-link">İLETİŞİM</a>
+        <a href="login.html" class="nav-link">LOGİN</a>
+            </nav>
+       
+  
+</div>
+ 
+<div class="arkaplan" > 
+   
+    <br> <br>
+  <div class="container" >
+    <form name="iletişim">
+     
+       <legend >
+        KİŞİSEL BİLGİLER
+       </legend>   
+       <table>
+           <tr>
+               <td>
+                İSİM:
+               </td>
+               <td>
+                <input  type="text" name="isim" id="isim">
+               </td>
+           </tr>
+           <tr>
+               <td>SOYİSİM :</td>
+               <td><input type="text" name="soyisim"> </td>
+           </tr>
+           <tr>
+            <td>CİNSİYETİNİZİ SEÇİNİZ</td>
+            <td><input type="radio" name="cinsiyet" id="kız" value="0"> KIZ 
+            <input type="radio" name="cinsiyet" id="erkek" value="1"> ERKEK 
+ 
+             </td>
+        </tr>
+        <tr>
+            <td>E-mail :</td>
+            <td> <input type="email" name="email" id="mail"></td>
+        </tr>
+        <tr>
+            <td>şifre:</td>
+            <td> <input type="password" name="şifre"></td>
+        </tr>
+        <tr>
+            <td>DOĞUM GÜNÜ :</td>
+            <td> <input type="date" name="dgünü"> </td>
+        </tr>
+        <tr>
+            <td>YAŞADIĞIN ŞEHİR</td>
+            <td> <select name="şehir ">
+                <option> şehriniz</option>
+                <option> SAKARYA</option>
+                <option> ANKARA</option>
+                <option> İSTANBUL</option>
+                <option> BURSA</option>
+                <option> İZMİR</option>
+                <option> ANTALYA</option>
+            </select> </td>
+        </tr>
+       
+        <tr>
+            <td width="200" height="50">
+                <legend >
+                   HOBİ
+                   </legend> 
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sevdiğin spor</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="spor" value="yüzme"> YÜZME <br>
+                <input type="checkbox" name="spor" value="futbol"> FUTBOL <br>
+                <input type="checkbox" name="spor" value="voleybol"> VOLEYBOL <br>
+                <input type="checkbox" name="spor" value="basketbol"> BASKETBOL <br>
+                <input type="checkbox" name="spor" value="tenis"> TENİS <br>
+                <input type="checkbox" name="spor" value="hentbol"> Hentbol <br>
+             </td>
+        </tr>
+        <tr>
+            <td width="200" height="50">
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                tuttuğun takım
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="takım" value="0"> GALATASARAY <br>
+                <input type="radio" name="takım" value="1"> FENERBAHÇE <br>
+                <input type="radio" name="takım" value="2"> BEŞİKTAŞ <br>
+                <input type="radio" name="takım" value="3"> TRABZON <br>
+            </td>
+        </tr>
+        <tr>
+            <td width="200" height="50">
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="Gönder" onclick="kontrol()"></td>
+            <td> <input type="reset" value="Temizle"> </td>
+        </tr>
+       </table> 
+    </form>
+    </div>
+
+
+
+</div>
+
+        
+</body>
+</html>
